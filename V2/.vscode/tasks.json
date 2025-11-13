@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build and run",
+      "type": "shell",
+      "command": "[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; $root = '${workspaceFolder}'; $files = Get-ChildItem $root -Filter *.cpp | ForEach-Object { $_.FullName }; if ($files.Count -eq 0) { Write-Host '❌ Aucun fichier .cpp trouvé dans' $root; exit 1 }; & g++ @files -o (Join-Path $root 'outDebug.exe'); if ($?) { Write-Host '✅ Compilation réussie !'; & (Join-Path $root 'outDebug.exe') }",
+      "options": {
+        "shell": {
+          "executable": "powershell.exe",
+          "args": ["-Command"]
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compile et exécute tous les .cpp dans le dossier du workspace"
+    }
+  ]
+}
