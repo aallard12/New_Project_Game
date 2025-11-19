@@ -18,6 +18,12 @@ Chevalier::~Chevalier()
     // Destructor
 }
 
+void Chevalier::afficherActions()
+{
+    Heros::afficherActions();
+    cout << "2. Parer" << endl;
+}
+
 int Chevalier::attaquer()
 {
     return attaque;

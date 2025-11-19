@@ -20,6 +20,7 @@ Boxeur::~Boxeur()
 
 void Boxeur::afficherActions()
 {
+    Heros::afficherActions();
     if (!justOnce) {
         cout << "2. Uppercut" << endl;
     } else {

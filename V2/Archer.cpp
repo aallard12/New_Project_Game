@@ -20,6 +20,7 @@ Archer::~Archer()
 
 void Archer::afficherActions()
 {
+    Heros::afficherActions();
     if (!justOnce) {
         cout << "2. Nouveau Carquois" << endl;
     } else {

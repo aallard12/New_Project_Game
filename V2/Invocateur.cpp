@@ -18,6 +18,16 @@ Invocateur::~Invocateur()
     // Destructor
 }
 
+void Invocateur::afficherActions()
+{
+    Heros::afficherActions();
+    if (nbCreatures < 5) {
+        cout << "2. Invoquer" << endl;
+    } else {
+        cout << "Vous avez utilisé toutes vos invocations !" << endl;
+    }
+}
+
 void Invocateur::invoquer()
 {
     if (nbCreatures < 5){

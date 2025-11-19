@@ -18,6 +18,16 @@ Cowboy::~Cowboy()
     // Destructor
 }
 
+void Cowboy::afficherActions()
+{
+    Heros::afficherActions();
+    if (!justOnce) {
+        cout << "2. Deuxième Coup" << endl;
+    } else {
+        cout << "Vous avez déjà utilisé votre pouvoir !" << endl;
+    }
+}
+
 int Cowboy::attaquer()
 {
     int somme = 0;

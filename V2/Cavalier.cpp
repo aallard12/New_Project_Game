@@ -18,6 +18,16 @@ Cavalier::~Cavalier()
     // Destructor
 }
 
+void Cavalier::afficherActions()
+{
+    Heros::afficherActions();
+    if (!justOnce) {
+        cout << "2. Ruer" << endl;
+    } else {
+        cout << "Vous avez déjà utilisé votre pouvoir !" << endl;
+    }
+}
+
 int Cavalier::attaquer()
 {
     int somme = 0;
@@ -41,10 +51,4 @@ bool Cavalier::getFonctionCall() {
 }
 void Cavalier::setFonctionCall(bool& value) {
     fonctionCall = value;
-}
-bool Cavalier::getJustOnce() {
-    return justOnce;
-}
-void Cavalier::setJustOnce(bool& value) {
-    justOnce = value;
 }

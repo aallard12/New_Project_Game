@@ -17,3 +17,13 @@ Druide::~Druide()
 {
     // Destructor
 }
+
+void Druide::afficherActions()
+{
+    Heros::afficherActions();
+    if (!justOnce) {
+        cout << "2. Soin" << endl;
+    } else {
+        cout << "Vous avez déjà utilisé votre pouvoir !" << endl;
+    }
+}

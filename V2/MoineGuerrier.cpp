@@ -17,3 +17,13 @@ MoineGuerrier::~MoineGuerrier()
 {
     // Destructor
 }
+
+void MoineGuerrier::afficherActions()
+{
+    Heros::afficherActions();
+    if (!justOnce) {
+        cout << "2. Frappe Spirituelle" << endl;
+    } else {
+        cout << "Vous avez déjà utilisé votre pouvoir !" << endl;
+    }
+}
