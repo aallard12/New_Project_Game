@@ -20,6 +20,8 @@ using namespace std;
 
 void jouerPartie(Heros* herosChoisi) {
     system("cls");
+    cout << "La partie va commencer !!" << endl;
+    this_thread::sleep_for(chrono::seconds(4));
 }
 
 int main() {
