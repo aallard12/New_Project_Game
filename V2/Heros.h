@@ -24,11 +24,14 @@ protected:
 public:
     Heros(int _pv, int _attaque, int _pvMax, int _xp, int _niveau);
     ~Heros();
+    virtual void afficherActions();
 
     int getPv();
     void setPv(int& value);
     int getAttaque();
     void setAttaque(int& value);
+
+    bool justOnce = false;
 };
 
 #endif // HEROS_H

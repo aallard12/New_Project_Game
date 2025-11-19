@@ -18,6 +18,15 @@ Boxeur::~Boxeur()
     // Destructor
 }
 
+void Boxeur::afficherActions()
+{
+    if (!justOnce) {
+        cout << "2. Uppercut" << endl;
+    } else {
+        cout << "Vous avez déjà utilisé votre pouvoir !" << endl;
+    }
+}
+
 int Boxeur::attaquer()
 {
     int somme = 0;

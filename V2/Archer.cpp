@@ -18,17 +18,23 @@ Archer::~Archer()
     // Destructor
 }
 
+void Archer::afficherActions()
+{
+    if (!justOnce) {
+        cout << "2. Nouveau Carquois" << endl;
+    } else {
+        cout << "Vous avez déjà utilisé votre pouvoir !" << endl;
+    }
+}
+
 int Archer::attaquer()
 {
-    int somme = 0;
-    somme += attaque + 5 * nbFleches;
-    return somme;
+    return attaque + 5 * nbFleches;
 }
 
 void Archer::nouveauCarquois()
 {
-    int nombre = rand() % 4 + 2;
-    nbFleches = nombre;
+    nbFleches = rand() % 4 + 2;
 }
 
 void Archer::carquoisPrécédent()

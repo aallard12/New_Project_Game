@@ -11,8 +11,6 @@ Cavalier::Cavalier(int _pv, int _attaque, int _pvMax, int _xp, int _niveau, bool
     Heros(_pv, _attaque, _pvMax, _xp, _niveau), fonctionCall(_fonctionCall)
 {
     // Constructor
-
-    justOnce = false;
 }
 
 Cavalier::~Cavalier()

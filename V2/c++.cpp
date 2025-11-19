@@ -18,12 +18,6 @@
 
 using namespace std;
 
-void jouerPartie(Heros* herosChoisi) {
-    system("cls");
-    cout << "La partie va commencer !!" << endl;
-    this_thread::sleep_for(chrono::seconds(4));
-}
-
 int main() {
 
     // Codes ANSI
@@ -33,45 +27,6 @@ int main() {
     Player joueur1("Antoine");
     Monster monstre1("Alicia");
     Heros* herosChoisi = nullptr;
-
-    /*Invocateur invocateur1(100,20,0);
-    Chevalier chevalier1(100,20,false);
-    Sorcier sorcier1(100,20,false);
-    Cavalier cavalier1(100,20,false);*/
-
-    /*cout << joueur1.getNom() << endl;
-    cout << monstre1.getAttaque() << " " << monstre1.getNom() << " " << monstre1.getPv() <<  endl;
-
-    bool retour = chevalier1.parer();
-    if (retour){
-        cout << "il va parer l'attaque" << endl;
-    } else {
-        cout << "il ne va pas parer l'attaque" << endl;
-    }
-
-    bool retour2 = sorcier1.bruler();
-    if (retour2){
-        cout << "il est brulé" << endl;
-    } else {
-        cout << "il n'est pas brulé" << endl;
-    }
-
-    int attaque = cavalier1.attaquer();
-    cout << attaque << endl;
-
-    if (!cavalier1.justOnce){
-        cavalier1.ruer();
-    } else {
-        cout << "Vous avez déjà rué" << endl;
-    }
-    attaque = cavalier1.attaquer();
-    cout << attaque << endl;
-    if (!cavalier1.justOnce){
-        cavalier1.ruer();
-    } else {
-        cout << "Vous avez déjà rué" << endl;
-    }
-    */
 
     int touche = -1;
 
@@ -212,4 +167,11 @@ int main() {
     delete herosChoisi;
 
     return 0;
+}
+
+void jouerPartie(Heros* herosChoisi) {
+    system("cls");
+    cout << "La partie va commencer !!" << endl;
+    this_thread::sleep_for(chrono::seconds(4));
+
 }

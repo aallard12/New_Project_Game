@@ -18,6 +18,11 @@ Heros::~Heros()
     // Destructor
 }
 
+void Heros::afficherActions()
+{
+    cout << "1. Attaquer" << endl;
+}
+
 int Heros::getPv() {
     return pv;
 }

@@ -21,12 +21,8 @@ public:
     int attaquer();
     void ruer();
 
-    bool justOnce;
-
     bool getFonctionCall();
     void setFonctionCall(bool& value);
-    bool getJustOnce();
-    void setJustOnce(bool& value);
 };
 
 #endif // CAVALIER_H
